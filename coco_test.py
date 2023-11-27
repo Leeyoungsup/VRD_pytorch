@@ -281,8 +281,8 @@ encoder = EncoderCNN(embed_size).eval()
 decoder = DecoderRNN(embed_size, hidden_size, len(vocab), num_layers)
 encoder = encoder.to(device)
 decoder = decoder.to(device)
-encoder_path = "../../model/encoder-5.ckpt"  # path for trained encoder
-decoder_path = "../../model/decoder-5.ckpt"  # path for trained decoder
+encoder_path = "../../model/COCO_CaptionGanEn.ckpt"  # path for trained encoder
+decoder_path = "../../model/COCO_CaptionGanDe.ckpt"  # path for trained decoder
 # Load the trained model parameters
 encoder.load_state_dict(torch.load(encoder_path))
 decoder.load_state_dict(torch.load(decoder_path))
